@@ -1,0 +1,26 @@
+<form #form *ngFor="let post of posts" action="">
+  <input [(ngModel)]="post.id" type="number" name="id" class="form-control" />
+
+  <input
+    [(ngModel)]="post.title"
+    type="text"
+    name="titolo"
+    class="form-control"
+  />
+
+  <input
+    [(ngModel)]="post.body"
+    type="text"
+    name="paragrafo"
+    class="form-control"
+  />
+  <!-- una check-box active e inactive -->
+  <input
+    [(ngModel)]="post.active"
+    type="string"
+    name="attivo"
+    class="form-control"
+  />
+
+  <button class="btn btn-outline-primary">Salva</button>
+</form>
