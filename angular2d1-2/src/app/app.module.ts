@@ -8,8 +8,8 @@ import { PostDetailComponent } from './components/post-detail/post-detail.compon
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
+import { SinglePostComponent } from './components/single-post/single-post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    FormComponent,
+    SinglePostComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

@@ -1,13 +1,13 @@
-import { iJsonResponse } from '../../interfaces/jason-response';
-import { iPost } from './../../interfaces/post';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { iPost } from '../../interfaces/post';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  selector: 'app-post-detail',
+  templateUrl: './post-detail.component.html',
+  styleUrl: './post-detail.component.scss',
 })
-export class HomeComponent implements OnInit {
+export class PostDetailComponent implements OnInit {
   posts: iPost[] = [
     {
       id: 1,
@@ -252,10 +252,15 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  postInEvidenza!: iPost;
+  constructor(private route: ActivatedRoute) {}
 
+  post!: iPost;
   ngOnInit(): void {
-    this.postInEvidenza =
-      this.posts[Math.floor(Math.random() * this.posts.length)];
+    // foundPost:iPost = posts.find((p) => p.id == posts['id']);
+    //       if (foundPost:iPost) {
+    //         return this.post = foundPost;
+    //       } else {
+    //         console.error('non trovato');
+    //       }
   }
 }
